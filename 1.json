@@ -1,0 +1,44 @@
+[  
+        {  
+            "major": 4,  
+            "minor": 0,  
+            "profile": "client",  
+            "servicePack": null,  
+        },  
+        {  
+            "major": 4,  
+            "minor": 0,  
+            "profile": "full",  
+            "servicePack": null,  
+        },  
+        {  
+            "major": 3,  
+            "minor": 5,  
+            "profile": "client",  
+            "servicePack": 1,  
+        },  
+        {  
+            "major": 3,  
+            "minor": 5,  
+            "profile": "full",  
+            "servicePack": 1,  
+        },  
+        {  
+            "major": 3,  
+            "minor": 0,  
+            "profile": "full",  
+            "servicePack": 1,  
+        },  
+        {  
+            "major": 2,  
+            "minor": 0,  
+            "profile": "full",  
+            "servicePack": 2,  
+        },  
+        {  
+            "major": 1AAA,  
+            "minor": 1,  
+            "profile": "full",  
+            "servicePack": 1,  
+        }  
+    ] 
