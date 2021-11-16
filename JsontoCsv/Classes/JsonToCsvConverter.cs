@@ -12,7 +12,6 @@ namespace JsontoCsv
         public object Convert(IFileModel file, string separator, Encoding enc) 
         {
             Dictionary<string, string> names = new Dictionary<string, string>();
-            List<string> values = new List<string>();
             string result = "";
             if (file.Data != null)
             {
@@ -21,14 +20,10 @@ namespace JsontoCsv
 
                 foreach (JObject obj in jarr.Children<JObject>())// first level objects
                 {
-                    string temp = "";
                     foreach (JProperty singleProp in obj.Properties()) // first level object properties
                     {
                         names.TryAdd(singleProp.Name, singleProp.Name);
-                        temp += $"{singleProp.Value.ToString()}{separator}";
                     }
-                    temp = temp.Remove(temp.Length - 1, 1);
-                    values.Add(temp);
                 }
 
                 foreach (object obj in names.Values)
@@ -36,12 +31,7 @@ namespace JsontoCsv
                     result += obj.ToString() + separator;
                 }
                 result = result.Remove(result.Length - 1, 1);
-                result += Environment.NewLine;
-
-                foreach (var item in values)
-                {
-                    result += item + Environment.NewLine;
-                }
+               
             }
             byte[] crutch = enc.GetBytes(result);
 
