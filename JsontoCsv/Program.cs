@@ -19,12 +19,6 @@ namespace JsontoCsv
             bool outPathExists=false;   
             bool quit=false;
 
-            args = new string[5];
-            args[0] = "-i";
-            args[1] = "1.json";
-            args[2] = "-q";
-            args[3] = "-o";
-            args[4] = "3.txt";
             if (args.Length != 0)
             {
                 for (int i = 0; i < args.Length; i++)
@@ -118,11 +112,8 @@ namespace JsontoCsv
                }
            }
 
-            
-
             if (inPathExists && outPathExists)
             {
-                
                 IFileModel InFile = Factory.CreateJsonFile(pathIn, FileReader.Read(pathIn));
                 IConverter converter = Factory.CreateConverter();
                 string convertedData = (string)converter.Convert(InFile, separator,en);
@@ -145,19 +136,7 @@ namespace JsontoCsv
                     StandardMessages.ShowEndMessage();
                 }
             }
-            else 
-            {
-
-            }
-
-
-
-            //var jsonFile = File.ReadAllText(jsonString);
-
-           // IFileModel InFile =  Factory.CreateJsonFile(pathIn, jsonString);
-
-           // IConverter converter = Factory.CreateConverter();
-
+         
         }
 
        
